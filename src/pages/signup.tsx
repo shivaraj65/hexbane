@@ -12,7 +12,7 @@ const Signup = () => {
       <Suspense fallback={<FullscreenLoader />}>
         <Component />
       </Suspense>
-      <Button>antd button</Button>
+      
     </React.Fragment>
   );
 };
