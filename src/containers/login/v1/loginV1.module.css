@@ -1,0 +1,12 @@
+.loginContainerV1 {
+  height: 100svh;
+  width: 100vw;
+}
+
+.loginSideV1 {
+  background-image: url("../../../assets/images/login/loginV1.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
