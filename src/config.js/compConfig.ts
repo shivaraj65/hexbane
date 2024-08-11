@@ -1,3 +1,4 @@
+//component leve configs for selection of components from appConfig
 type LoginConfigKeys = {
   loginV1: () => Promise<typeof import("../containers/login/v1")>;
   loginV2: () => Promise<typeof import("../containers/login/v2")>;
