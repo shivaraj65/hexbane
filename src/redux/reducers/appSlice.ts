@@ -1,43 +1,42 @@
-// this slice will contain application leve data such as
-//
+/**
+ * this slice will contain application level data.
+ * -> user infos
+ */
 
+import { userInfo } from "@/utils/types/appTypes";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-// Define the Todo type
-interface Todo {
-  id: number;
-  text: string;
-  completed: boolean;
+interface app {
+  userInfo: userInfo | null;
 }
 
-// Define the initial state as an array of Todo
-const initialState: Todo[] = [
-  {
-    id: 0,
-    text: "hello",
-    completed: false,
-  },
-];
+const initialState: app = {
+  userInfo: null,
+};
 
-const todosSlice = createSlice({
-  name: "todos",
+const appSlice = createSlice({
+  name: "app",
   initialState,
   reducers: {
-    todoAdded(state, action: PayloadAction<{ id: number; text: string }>) {
-      state.push({
-        id: action.payload.id,
-        text: action.payload.text,
-        completed: false,
-      });
+    updateUserInfo(state, action: PayloadAction<userInfo>) {
+      state.userInfo = action.payload;
     },
-    todoToggled(state, action: PayloadAction<number>) {
-      const todo = state.find((todo) => todo.id === action.payload);
-      if (todo) {
-        todo.completed = !todo.completed;
-      }
-    },
+
+    // todoAdded(state, action: PayloadAction<{ id: number; text: string }>) {
+    //   state.push({
+    //     id: action.payload.id,
+    //     text: action.payload.text,
+    //     completed: false,
+    //   });
+    // },
+    // todoToggled(state, action: PayloadAction<number>) {
+    //   const todo = state.find((todo) => todo.id === action.payload);
+    //   if (todo) {
+    //     todo.completed = !todo.completed;
+    //   }
+    // },
   },
 });
 
-export const { todoAdded, todoToggled } = todosSlice.actions;
-export default todosSlice.reducer;
+export const { updateUserInfo } = appSlice.actions;
+export default appSlice.reducer;

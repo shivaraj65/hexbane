@@ -6,7 +6,15 @@
 .loginSideV1 {
   background-image: url("../../../assets/images/login/loginV1.jpg");
   height: 100%;
-  width: 100%;
-  background-position: center;
+  width: 100% !important;
+  background-position:center;
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.formContainerV1{
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
