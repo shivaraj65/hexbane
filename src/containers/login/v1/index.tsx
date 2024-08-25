@@ -6,6 +6,7 @@ import JWTDecoder from "../googleHelper/jwtDecoder";
 import type { RootState } from "../../../redux/store";
 import { useSelector, useDispatch } from "react-redux";
 import { updateUserInfo } from "@/redux/reducers/appSlice";
+import ThemeToggle from "@/components/ui/themeToggle/themeToggle";
 
 const Login = () => {
   const [user, setUser] = useState<any>(null);
@@ -55,7 +56,11 @@ const Login = () => {
               console.log("Login Failed");
             }}
           />
-          <p className={styles.mutedText}>or</p>
+          <div className={styles.passwordLoginContV1}>
+            <p className={`muted ${styles.mutedtext}`}>hfffjhfjhor</p>
+            <h1 className={"primary"}>irbgoebrgr</h1>
+            <ThemeToggle />
+          </div>
         </div>
       </Col>
     </Row>

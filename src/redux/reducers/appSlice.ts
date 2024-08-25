@@ -8,10 +8,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface app {
   userInfo: userInfo | null;
+  theme: string;
 }
 
 const initialState: app = {
   userInfo: null,
+  theme: "light",
 };
 
 const appSlice = createSlice({
@@ -20,6 +22,9 @@ const appSlice = createSlice({
   reducers: {
     updateUserInfo(state, action: PayloadAction<userInfo>) {
       state.userInfo = action.payload;
+    },
+    updateTheme(state, action: PayloadAction<string>) {
+      state.theme = action.payload;
     },
 
     // todoAdded(state, action: PayloadAction<{ id: number; text: string }>) {
@@ -38,5 +43,5 @@ const appSlice = createSlice({
   },
 });
 
-export const { updateUserInfo } = appSlice.actions;
+export const { updateUserInfo, updateTheme } = appSlice.actions;
 export default appSlice.reducer;

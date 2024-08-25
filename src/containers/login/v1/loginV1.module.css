@@ -15,6 +15,15 @@
 .formContainerV1{
   padding: 0.5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.passwordLoginContV1{
+  display: block;
+}
+
+.mutedtext{
+  /* text-align: center; */
 }
