@@ -30,6 +30,11 @@
 
 html,
 body {
+  font-family: "Montserrat", sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+hr{
+  margin: 1.3rem 0;
 }
