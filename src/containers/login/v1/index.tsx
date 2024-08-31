@@ -41,7 +41,7 @@ const Login = () => {
   }, [user]);
 
   return (
-    <Row className={styles.loginContainerV1}>
+    <Row className={`${styles.loginContainerV1} bg-primary primaryText`}>
       <Col span={16} className={styles.loginSideV1}>
         {/* image */}
       </Col>
@@ -58,7 +58,8 @@ const Login = () => {
           />
           <div className={styles.passwordLoginContV1}>
             <p className={`muted ${styles.mutedtext}`}>hfffjhfjhor</p>
-            <h1 className={"primary"}>irbgoebrgr</h1>
+            <h1 className={"accentText"}>irbgoebrgr</h1>
+
             <ThemeToggle />
           </div>
         </div>

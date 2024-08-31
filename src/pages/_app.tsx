@@ -11,15 +11,14 @@ import ThemeWrapper from "@/components/ui/themeWrapper/themeWrapper";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-      <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID!}>
-        <Provider store={store}>
-          <ConfigProvider theme={theme}>
-            <ThemeWrapper>
-              <Component {...pageProps} />
-            </ThemeWrapper>
-          </ConfigProvider>
-        </Provider>
-      </GoogleOAuthProvider>
-   
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_CLIENT_ID!}>
+      <Provider store={store}>
+        <ConfigProvider theme={theme}>
+          <ThemeWrapper>
+            <Component {...pageProps} />
+          </ThemeWrapper>
+        </ConfigProvider>
+      </Provider>
+    </GoogleOAuthProvider>
   );
 }
