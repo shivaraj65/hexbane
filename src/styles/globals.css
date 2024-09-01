@@ -35,6 +35,24 @@ body {
   overflow-x: hidden;
 }
 
-hr{
+hr {
   margin: 1.3rem 0;
+}
+
+.themeToggle {
+  /* height: 1rem !important; */
+  display: flex !important;
+  margin: 0 auto;
+  /* align-items: center !important; */
+  /* justify-content: center !important; */
+  width: 50% !important;
+}
+
+
+
+
+/* ---------- andDesigns override ---------- */
+
+.ant-layout {
+  /* background-color: transparent; */
 }
