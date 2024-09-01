@@ -26,6 +26,22 @@ $dark-400: #676767;
 $dark-500: #9b9b9b;
 $dark-600: #b4b4b4;
 
+// primary - dark mixed theme colors:
+$mix-dark-100: #30273c;
+$mix-dark-200: #443b4f;
+$mix-dark-300: #595163;
+$mix-dark-400: #6f6878;
+$mix-dark-500: #857f8d;
+$mix-dark-600: #9d97a3;
+
+//primary - light mixed theme colors
+$mix-light-100: #d0bde6;
+$mix-light-200: #d5c4e9;
+$mix-light-300: #dbcbec;
+$mix-light-400: #e0d3ee;
+$mix-light-500: #e5daf1;
+$mix-light-600: #eae1f4;
+
 * {
   .primary {
     color: $primary-100 !important;
@@ -120,14 +136,12 @@ $dark-600: #b4b4b4;
     .accentText {
       color: $primary-100 !important;
     }
-
   }
 
   [data-theme="dark"] {
-
     //----------- background-color styles -----------
     .bg-primary {
-      background-color: $dark-200 !important;
+      background-color: $dark-100 !important;
     }
     .bg-secondary {
       background-color: $dark-300 !important;
@@ -146,6 +160,5 @@ $dark-600: #b4b4b4;
     .accentText {
       color: $primary-100 !important;
     }
-
   }
 }

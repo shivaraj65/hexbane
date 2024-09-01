@@ -36,9 +36,9 @@ const ErrorPage = ({ title = "", message = "" }: props) => {
           </div>
         </Col>
       </Row>
-      <div className="display"></div>
+      {/* <div className="display"></div> */}
 
-      <footer>
+      {/* <footer>
         <p>
           <a
             href="https://github.com/shivaraj65"
@@ -49,7 +49,7 @@ const ErrorPage = ({ title = "", message = "" }: props) => {
           </a>{" "}
           - AtomifyStudios - HEXBANE
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 };
