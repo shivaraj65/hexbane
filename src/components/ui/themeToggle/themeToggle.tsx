@@ -17,10 +17,10 @@ const ThemeToggle = () => {
 
   return (
     <DarkModeToggle
-      className=""
+      className="themeToggle"
       onChange={setIsDarkMode}
       checked={theme === "dark" ? true : false}
-      size={"50%"}
+      size={"3.5rem"}
     />
   );
 };
