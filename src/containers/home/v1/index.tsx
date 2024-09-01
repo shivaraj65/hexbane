@@ -40,12 +40,13 @@ const items = [
 
 const Home = () => {
   const [selectedMenu, setSelectedMenu] = useState<any>({
-    key: "page1",
-    icon: <HomeOutlined />,
-    label: "Page 1",
+    key: "page4",
+    icon: <SettingOutlined />,
+    label: "Settings",
   });
 
   const theme = useSelector((state: RootState) => state.app.theme);
+  const userInfo = useSelector((state: RootState) => state.app.userInfo);
   const dispatch = useDispatch();
 
   return (
@@ -81,7 +82,7 @@ const Home = () => {
 
         <div>
           {/* <p> {selectedMenu.key}</p> */}
-          {selectedMenu.key === "page4" && <Settings />}
+          {selectedMenu.key === "page4" && <Settings userInfo={userInfo} />}
         </div>
 
         {/* <Footer style={{ textAlign: "center" }}>
