@@ -7,7 +7,8 @@ import type { AppProps } from "next/app";
 import { store } from "../redux/store";
 import { Provider } from "react-redux";
 import "@/styles/theme/appTheme.scss";
-import "@/styles/theme/antdOverride.scss"
+import "@/styles/theme/antdOverride.scss";
+import "@/styles/theme/globalTheme.scss";
 import ThemeWrapper from "@/components/ui/themeWrapper/themeWrapper";
 
 export default function App({ Component, pageProps }: AppProps) {
