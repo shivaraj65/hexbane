@@ -10,7 +10,7 @@ const Profile = () => {
           size="large"
           src="https://api.dicebear.com/7.x/miniavs/svg?seed=6"
         />
-        <span className={`${styles.userName} light-200`}>User Name</span>
+        <span className={`${styles.userName} light-200`}>John Doe</span>
       </div>
       <div className={styles.profileBody}>
         <Row>
@@ -52,11 +52,6 @@ const Profile = () => {
           </Col>
         </Row>
       </div>
-
-      {/* <ErrorPage
-        title="🚧 Profile Page 🚧"
-        message="Stay tuned! Coming soon ⏱️"
-      /> */}
     </div>
   );
 };
