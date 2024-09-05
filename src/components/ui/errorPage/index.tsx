@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./errorPage.module.css";
+import styles from "@/styles/componentThemes/errorPage.module.scss";
 import ScareCrowImg from "@/assets/images/error/Scarecrow.png";
 import { Card, Col, Row } from "antd";
 
