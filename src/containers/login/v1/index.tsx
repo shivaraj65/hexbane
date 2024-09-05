@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Row } from "antd";
-import styles from "./loginV1.module.css";
+import styles from "@/styles/containerThemes/login/v1.module.scss";
 import { GoogleLogin } from "@react-oauth/google";
 import JWTDecoder from "../googleHelper/jwtDecoder";
 import type { RootState } from "../../../redux/store";
