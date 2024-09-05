@@ -1,6 +1,5 @@
-import { Avatar, Col, Image, Row } from "antd";
-import styles from "./profile.module.css";
-import ErrorPage from "@/components/ui/errorPage";
+import { Avatar, Col, Row } from "antd";
+import styles from "@/styles/containerThemes/home/pages/settings/screens/profile.module.scss";
 
 const Profile = () => {
   return (

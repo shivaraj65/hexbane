@@ -1,6 +1,6 @@
 import { Breadcrumb, Card, Col, Row } from "antd";
 import { SettingOutlined } from "@ant-design/icons";
-import styles from "./settigns.module.css";
+import styles from "@/styles/containerThemes/home/pages/settings/settings.module.scss";
 import React, { useState } from "react";
 import { cardItems } from "./screens/settings";
 
@@ -12,7 +12,7 @@ const Settings = ({ userInfo }: props) => {
   const [breadCrumbList, setBreadCrumbList] = useState<string | null>(null);
 
   return (
-    <div style={{ width: "100%", height: "100%", display:"flex", flexDirection:"column" }}>
+    <div className={styles.settingsPageContainer}>
       <h1 className={styles.title}>Settings</h1>
       {breadCrumbList !== null && (
         <div className={styles.breadCrumbContainer}>
