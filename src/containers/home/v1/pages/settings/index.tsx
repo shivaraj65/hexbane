@@ -12,7 +12,7 @@ const Settings = ({ userInfo }: props) => {
   const [breadCrumbList, setBreadCrumbList] = useState<string | null>(null);
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%", height: "100%", display:"flex", flexDirection:"column" }}>
       <h1 className={styles.title}>Settings</h1>
       {breadCrumbList !== null && (
         <div className={styles.breadCrumbContainer}>

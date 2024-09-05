@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./homeV1.module.css";
 import {
   CompassOutlined,
-  UserOutlined,
   HomeOutlined,
   SettingOutlined,
   BookOutlined,
@@ -80,8 +79,7 @@ const Home = () => {
       <Layout className={`bg-primary primaryText ${styles.rightContainer}`}>
         {/* <Header style={{ padding: 0, background: colorBgContainer }} /> */}
 
-        <div>
-          {/* <p> {selectedMenu.key}</p> */}
+        <div style={{ width: "100%", height: "100%" }}>
           {selectedMenu.key === "page4" && <Settings userInfo={userInfo} />}
         </div>
 
@@ -94,3 +92,4 @@ const Home = () => {
 };
 
 export default Home;
+ 
