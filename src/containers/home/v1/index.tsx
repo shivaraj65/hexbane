@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./homeV1.module.css";
 import {
   CompassOutlined,
-  UserOutlined,
   HomeOutlined,
   SettingOutlined,
   BookOutlined,
@@ -93,3 +92,4 @@ const Home = () => {
 };
 
 export default Home;
+ 
