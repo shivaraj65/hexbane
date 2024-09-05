@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./homeV1.module.css";
+import styles from "@/styles/containerThemes/home/v1.module.scss"
 import {
   CompassOutlined,
   HomeOutlined,
