@@ -2,14 +2,15 @@ import React from "react";
 import Image from "next/image";
 import styles from "@/styles/componentThemes/errorPage.module.scss";
 import ScareCrowImg from "@/assets/images/error/Scarecrow.png";
-import { Card, Col, Row } from "antd";
+import { Card, Col, Row, Button } from "antd";
 
 interface props {
   message: string;
   title: string;
+  prefixText: string;
 }
 
-const ErrorPage = ({ title = "", message = "" }: props) => {
+const ErrorPage = ({ title = "", message = "", prefixText = "" }: props) => {
   return (
     <div className={`${styles.errorContainer} bg-primary primaryText`}>
       <h1 className={styles.errorTitle}>{title}</h1>
@@ -26,13 +27,11 @@ const ErrorPage = ({ title = "", message = "" }: props) => {
         </Col>
         <Col span={14} className={styles.errorCol}>
           <div className={styles.displayContent}>
-            <h2 className={styles.displayContentInfo}>
-              I have bad news for you
-            </h2>
+            <h2 className={styles.displayContentInfo}>{prefixText}</h2>
             <Card bordered={true} className={`${styles.errorCard} card`}>
               <p className={styles.displayContentText}>{message}</p>
             </Card>
-            {/* <Button className="btn">Back to homepage</Button> */}
+            {/* <Button className="btn" type={"primary"}>Back to homepage</Button> */}
           </div>
         </Col>
       </Row>

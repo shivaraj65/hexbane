@@ -38,7 +38,7 @@ const Login: React.FC = () => {
 
   if (error) {
     // return <div>Error loading component: {error.message}</div>;
-    return <ErrorPage message={error?.message} title={error?.name} />;
+    return <ErrorPage message={error?.message} prefixText ="I have bad news for you" title={error?.name} />;
   }
 
   return (
