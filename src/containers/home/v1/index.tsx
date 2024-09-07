@@ -11,6 +11,7 @@ import type { RootState } from "../../../redux/store";
 import { useSelector, useDispatch } from "react-redux";
 import ThemeToggle from "@/components/ui/themeToggle/themeToggle";
 import Settings from "./pages/settings";
+import Page1 from "./pages/page1";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -39,7 +40,7 @@ const items = [
 
 const Home = () => {
   const [selectedMenu, setSelectedMenu] = useState<any>({
-    key: "page4",
+    key: "page1",
     icon: <SettingOutlined />,
     label: "Settings",
   });
@@ -86,6 +87,7 @@ const Home = () => {
         {/* <Header style={{ padding: 0, background: colorBgContainer }} /> */}
 
         <div style={{ width: "100%", height: "100%" }}>
+          {selectedMenu.key === "page1" && <Page1 />}
           {selectedMenu.key === "page4" && <Settings userInfo={userInfo} />}
         </div>
 
