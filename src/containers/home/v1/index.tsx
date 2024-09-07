@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import styles from "@/styles/containerThemes/home/v1.module.scss"
+import styles from "@/styles/containerThemes/home/v1.module.scss";
 import {
   CompassOutlined,
-  HomeOutlined,
+  EditOutlined,
   SettingOutlined,
   BookOutlined,
 } from "@ant-design/icons";
-import { Layout, Menu } from "antd";
+import { Avatar, Layout, Menu } from "antd";
 import type { RootState } from "../../../redux/store";
 import { useSelector, useDispatch } from "react-redux";
 import ThemeToggle from "@/components/ui/themeToggle/themeToggle";
@@ -17,19 +17,19 @@ const { Header, Content, Footer, Sider } = Layout;
 const items = [
   {
     key: "page1",
-    icon: <HomeOutlined />,
-    label: "Page 1",
+    icon: <EditOutlined />,
+    label: "New Chat",
   },
   {
     key: "page2",
     icon: <CompassOutlined />,
-    label: "Page 2",
+    label: "Workspace",
   },
-  {
-    key: "page3",
-    icon: <BookOutlined />,
-    label: "Page 3",
-  },
+  // {
+  //   key: "page3",
+  //   icon: <BookOutlined />,
+  //   label: "Page 3",
+  // },
   {
     key: "page4",
     icon: <SettingOutlined />,
@@ -45,6 +45,7 @@ const Home = () => {
   });
 
   const theme = useSelector((state: RootState) => state.app.theme);
+  const appInfo = useSelector((state: RootState) => state.app.appInfo);
   const userInfo = useSelector((state: RootState) => state.app.userInfo);
   const dispatch = useDispatch();
 
@@ -52,6 +53,7 @@ const Home = () => {
     <Layout className={`${styles.homeContainer} bg-primary primaryText`}>
       <Sider
         theme={theme === "dark" ? "dark" : "light"}
+        className={styles.siderContainer}
         breakpoint="lg"
         collapsedWidth="0"
         onBreakpoint={(broken) => {
@@ -61,8 +63,12 @@ const Home = () => {
           // console.log(collapsed, type);
         }}
       >
-        <div className="demo-logo-vertical" />
-        <p>logo</p>
+        {/* <div className="demo-logo-vertical" /> */}
+        <div className={styles.logoContainer}>
+          {/* {appInfo && <img src={appInfo?.logo} />} */}
+
+          <h2 className={styles.title}>{appInfo && appInfo?.name}</h2>
+        </div>
 
         <Menu
           theme={theme === "dark" ? "dark" : "light"}
@@ -92,4 +98,3 @@ const Home = () => {
 };
 
 export default Home;
- 

@@ -1,4 +1,10 @@
-export interface userInfo {
+export interface appInfotypes{    
+    name:string;
+    logo:string;
+    description:string;
+};
+
+export interface userInfotypes {
     id:string;
     name:string;
     picture?:String;

@@ -35,7 +35,7 @@ import React, {
     }
   
     if (error) {      
-      return <ErrorPage message={error?.message} title={error?.name} />;
+      return <ErrorPage message={error?.message} prefixText ="I have bad news for you" title={error?.name} />;
     }
   
     return (

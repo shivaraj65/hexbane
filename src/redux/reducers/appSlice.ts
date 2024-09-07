@@ -3,15 +3,21 @@
  * -> user infos
  */
 
-import { userInfo } from "@/utils/types/appTypes";
+import { userInfotypes, appInfotypes } from "@/utils/types/appTypes";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface app {
-  userInfo: userInfo | null;
+  appInfo: appInfotypes | null;
+  userInfo: userInfotypes | null;
   theme: string;
 }
 
 const initialState: app = {
+  appInfo:{
+    name:"HEXBANE 🐦‍🔥",
+    logo:"https://picsum.photos/150/50",
+    description:"Hexbane is a development accelerator module to spin up a application in a very quick duration of time.",
+  },
   userInfo: null,
   theme: "light",
 };
@@ -20,7 +26,7 @@ const appSlice = createSlice({
   name: "app",
   initialState,
   reducers: {
-    updateUserInfo(state, action: PayloadAction<userInfo>) {
+    updateUserInfo(state, action: PayloadAction<userInfotypes>) {
       state.userInfo = action.payload;
     },
     updateTheme(state, action: PayloadAction<string>) {
